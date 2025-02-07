@@ -1,6 +1,8 @@
-import { Edit, SimpleForm, TextInput } from 'react-admin';
-export const UserEdit = () => (    
-    <Edit>        
+import { Create, SimpleForm, TextInput } from 'react-admin'
+
+export default function CreateUser() {
+  return (
+    <Create>
         <SimpleForm>            
             <TextInput source="id" />            
             <TextInput source="name" />            
@@ -9,6 +11,8 @@ export const UserEdit = () => (
             <TextInput source="address.street" />            
             <TextInput source="phone" />            
             <TextInput source="website" />            
-            <TextInput source="company.name" />       
-        </SimpleForm>    
-    </Edit>);
+            <TextInput source="company.name" />        
+        </SimpleForm>
+    </Create>
+  )
+}
