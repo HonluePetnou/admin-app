@@ -2,7 +2,7 @@ import {
   Admin,
   Resource,
 } from "react-admin";
-import { Layout } from "./Layout";
+// import { Layout } from "./Layout";
 import { dataProvider } from "./dataProvider";
 import { PostList } from "./pages/Posts/PostsLists";
 import { UserList } from "./pages/Users/UsersLists";
@@ -15,13 +15,14 @@ import CreatePost from "./pages/Posts/CreatePosts";
 import { authProvider } from "./authProvider";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import { GroupOutlined, PostAdd } from "@mui/icons-material";
+import { MyLayout } from "./pages/layout";
 
 
 
 
 export const App = () => (
   <Admin 
-  layout={Layout} 
+  layout={MyLayout} 
   dataProvider={dataProvider} 
   dashboard={Dashboard} 
   authProvider={authProvider}
