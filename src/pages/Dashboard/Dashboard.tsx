@@ -72,7 +72,7 @@ const Dashboard: React.FC = () => {
       gap={2}
       sx={{ marginTop: 4 }}
     >
-      {/* 📊 Section Gauche - Statistiques & Graphique */}
+      {/*  Section Gauche - Statistiques & Graphique */}
       <Box
         display="grid"
         gridTemplateColumns={{ xs: "1fr", md: "1fr 1fr" }}
@@ -102,12 +102,12 @@ const Dashboard: React.FC = () => {
           </CardContent>
         </Card>
 
-        {/* 📈 Graphique de croissance */}
+        {/* Graphique de croissance */}
         <Box gridColumn="span 2">
           <Card>
             <CardContent>
               <Typography variant="h5" align="center">
-                📈 Monthly Growth
+                Monthly Growth
               </Typography>
               <ResponsiveContainer width="100%" height={300}>
                 <LineChart data={chartData}>
@@ -135,12 +135,12 @@ const Dashboard: React.FC = () => {
           </Card>
         </Box>
 
-        {/* 📌 Graphique en camembert : Répartition Publié/Brouillon */}
+        {/* Graphique en camembert : Répartition Publié/Brouillon */}
         <Box gridColumn="span 2">
           <Card>
             <CardContent>
               <Typography variant="h5" align="center">
-                📌 Répartition des Articles
+                Répartition des Articles
               </Typography>
               {loadingPosts ? (
                 <CircularProgress />
@@ -167,12 +167,12 @@ const Dashboard: React.FC = () => {
         </Box>
       </Box>
 
-      {/* 👥 Section Droite - Derniers utilisateurs */}
+      {/* Section Droite - Derniers utilisateurs */}
       <Box>
         <Card>
           <CardContent>
             <Typography variant="h5" align="center">
-              👥 Recent Users
+              Recent Users
             </Typography>
             {loadingUsers ? (
               <CircularProgress />

@@ -4,7 +4,7 @@ import {
   radiantDarkTheme,
   radiantLightTheme
 } from "react-admin";
-// import { Layout } from "./Layout";
+
 import { dataProvider } from "./provider/dataProvider";
 import { PostList } from "./pages/Posts/PostsLists";
 import { UserList } from "./pages/Users/UsersLists";
