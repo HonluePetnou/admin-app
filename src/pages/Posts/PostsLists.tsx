@@ -1,4 +1,4 @@
-import { List, Datagrid, TextField, ReferenceField } from 'react-admin';
+import { List, Datagrid, TextField, ReferenceField, TextInput, ReferenceInput, SelectInput } from 'react-admin';
 import { useRecordContext } from 'react-admin';
 import { styled } from '@mui/material/styles';
 
@@ -44,9 +44,22 @@ const StatusFieldComponent = () => {
     return <StatusField status={randomStatus}>{randomStatus}</StatusField>;
 };
 
+const postFilters = [
+    <ReferenceInput source="userId" reference="users" label="Author"/>, 
+    <SelectInput
+        label="Status"
+        source="status"  // This must match the field in the dataset
+        choices={[
+            { id: 'Published', name: 'Published' },
+            { id: 'Draft', name: 'Draft' },
+            { id: 'Archived', name: 'Archived' },
+        ]}
+    />,   
+];
+
 // List of posts with dynamically generated date
 export const PostList = () => (
-    <List>
+    <List filters={postFilters}>
         <Datagrid rowClick="edit">
             <TextField source="title" label="Title" />
             <ReferenceField source="userId" reference="users" label="Author">
